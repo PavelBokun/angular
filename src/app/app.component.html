@@ -331,6 +331,13 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<h1>{{ title }}</h1>
+<button (click)="title='new title'"> chenge title </button>
+<ul>
+  @for(item of items; track items){
+<li>{{item}}</li>
+  }
+</ul>
 
-
+<!-- <app-test1></app-test1> -->
 <router-outlet />
