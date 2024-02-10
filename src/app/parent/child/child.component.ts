@@ -1,6 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Address } from '../parent.component';
 
+
+ export interface Learn{
+  math: number
+  physic: number
+}
 @Component({
   selector: 'app-child',
   standalone: true,
@@ -14,4 +19,14 @@ name='Victor'
 @Input() sureNameProps?: string
 
 @Input() address?: Address
+
+@Output() setChange = new EventEmitter<Learn>()
+setNumberChange(){
+  const math=5
+  const physic=4
+  this.setChange.emit({math,physic})
 }
+
+
+}
+

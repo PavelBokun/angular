@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { ChildComponent } from './child/child.component'
+import { ChildComponent, Learn } from './child/child.component'
 
 export interface Address{
   sity: string
@@ -22,5 +22,15 @@ export class ParentComponent {
     sity: 'Minsk',
     street: 'Lenina',
     house: 49,
+  }
+
+  math:number
+  physic:number
+
+  getChange(value:Learn){
+    debugger
+this.physic=value.physic
+this.math=value.math
+
   }
 }

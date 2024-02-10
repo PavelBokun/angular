@@ -2,5 +2,8 @@
 <div class="parent">
     <p>parent works!</p>
     <h1> Parent {{name}} {{sureName}} from {{address.sity}} {{address.street}} {{address.house}}</h1>
+    <h2> math: {{math}}</h2>
+    <h2> physic: {{physic}}</h2>
+
 </div>
-<app-child [sureNameProps]="sureName" [address]="address"></app-child>
+<app-child [sureNameProps]="sureName" [address]="address" (setChange)="getChange($event)"></app-child>
